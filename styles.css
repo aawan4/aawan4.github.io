@@ -196,3 +196,9 @@ body {
         display: flex;
     }
 }
+/* Highlight active link */
+.nav-links .active {
+    color: #1abc9c;
+    font-weight: bold;
+}
+
