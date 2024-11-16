@@ -1,4 +1,4 @@
-/* General Styles */
+/* Resetting margin and padding */
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +7,8 @@
 
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
 }
 
 /* Navbar Styles */
@@ -45,7 +47,6 @@ body {
     border-radius: 5px;
 }
 
-/* Mobile Menu Button */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -59,7 +60,105 @@ body {
     margin: 5px 0;
 }
 
-/* Media Query for Mobile */
+/* Home Section */
+.home {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.home-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.home h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.home p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.home p strong {
+    color: #333;
+}
+
+/* About Section */
+.about {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Projects Section */
+.projects {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.projects-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+.contact {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    color: #007BFF;
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 40px;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -84,5 +183,13 @@ body {
 
     .menu-toggle {
         display: flex;
+    }
+
+    .home h1 {
+        font-size: 28px;
+    }
+
+    .home p {
+        font-size: 16px;
     }
 }
