@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "weargalaxy.me",
+  "Id": "51fe8c50-8044-4980-8926-e3aca969c348"
+}
