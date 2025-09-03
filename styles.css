@@ -7,7 +7,8 @@
     --text-dark: #3a3a3a;             /* Dark Gray for light backgrounds */
     --hover-highlight: #a08170;       /* Slightly lighter brown for hovers */
     --shadow-light: rgba(0, 0, 0, 0.08);
-    --shadow-medium: rgba(0, 0, 0, 0.15);
+    --shadow-medium: rgba(0, 0, 0, 0.25); /* Increased for more depth */
+    --shadow-strong: rgba(0, 0, 0, 0.4);  /* New for stronger depth */
     --font-main: 'Inter', sans-serif;
     --font-heading: 'Montserrat', sans-serif;
 }
@@ -25,6 +26,7 @@ body, html {
     background-color: var(--secondary-bg-light);
     color: var(--text-dark);
     scroll-behavior: smooth;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* --- Typography --- */
@@ -33,9 +35,10 @@ h1, h2, h3 {
     color: var(--primary-dark);
     margin-bottom: 0.8em;
     line-height: 1.2;
+    text-align: center; /* Ensure headings are centered */
 }
 h1 { font-size: 2.8em; }
-p { margin-bottom: 1em; }
+p { margin-bottom: 1em; text-align: center;} /* Ensure paragraphs are centered */
 
 /* --- Navbar --- */
 .navbar {
@@ -107,6 +110,9 @@ p { margin-bottom: 1em; }
 .home-content {
     max-width: 800px;
     animation: fadeIn 1.2s ease-out;
+    display: flex; /* Use flex for content centering */
+    flex-direction: column;
+    align-items: center;
 }
 
 .home h1 {
@@ -123,21 +129,23 @@ p { margin-bottom: 1em; }
     margin-right: auto;
 }
 
+/* --- Image Blending Fix --- */
 .home-image-container {
     margin-top: 40px;
-    background-color: var(--secondary-bg-light);
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 8px 30px var(--shadow-medium);
-    display: inline-block;
+    /* Removed background-color and padding to blend with gradient */
+    border-radius: 12px; /* Keep outer border-radius for potential shadow shape */
+    box-shadow: 0 15px 35px var(--shadow-strong); /* Stronger, deeper shadow */
+    display: inline-block; /* To contain shadow */
+    overflow: hidden; /* Ensures image corners match container border-radius */
 }
 
 .home-image {
     width: 100%;
-    max-width: 500px;
+    max-width: 500px; /* Control image size within the container */
     height: auto;
-    border-radius: 8px;
+    border-radius: 12px; /* Match container border-radius */
     display: block;
+    border: 3px solid rgba(255, 255, 255, 0.1); /* Subtle white border for definition */
 }
 
 /* --- Call-to-Action Button --- */
@@ -158,7 +166,7 @@ p { margin-bottom: 1em; }
 .cta-button:hover {
     background-color: var(--hover-highlight);
     transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 8px 25px var(--shadow-medium);
+    box-shadow: 0 8px 25px var(--shadow-strong);
 }
 
 /* --- Footer --- */
@@ -186,6 +194,10 @@ p { margin-bottom: 1em; }
 
 /* --- Responsive Design --- */
 @media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
     .nav-links {
         display: none;
         flex-direction: column;
@@ -212,6 +224,14 @@ p { margin-bottom: 1em; }
     }
     .menu-toggle {
         display: block;
+    }
+
+    .home h1 {
+        font-size: 2.2em;
+    }
+
+    .home p {
+        font-size: 0.95em;
     }
 }
 
