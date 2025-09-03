@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WeAR Galaxy - Explore Glasses Virtually</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -33,7 +38,8 @@
             
             <a href="https://ai.weargalaxy.me" class="cta-button" target="_blank">Launch the AI Advisor</a>
             
-            <div class="home-image-container"> <img src="images/home-glasses.jpg" alt="Glasses Showcase" class="home-image">
+            <div class="home-image-container">
+                <img src="images/home_glasses.jpg" alt="Glasses Showcase" class="home-image">
             </div>
         </div>
     </section>
@@ -41,5 +47,11 @@
     <footer class="footer">
         <p>&copy; 2025 WeAR Galaxy. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
