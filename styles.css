@@ -1,13 +1,18 @@
-/* Color Palette from Image:
-   --primary-dark: #2f3a47 (Deep Blue-Gray)
-   --secondary-bg-light: #f5f0eb (Soft Off-White/Light Cream)
-   --accent-brown: #8b6d5c (Warm Mid-Tone Brown)
-   --text-light: #e0e0e0 (Light Gray for dark backgrounds)
-   --text-dark: #3a3a3a (Dark Gray for light backgrounds)
-   --hover-highlight: #a08170 (Slightly lighter brown for hovers)
-*/
+/* --- Root Variables (Color Palette from your Image) --- */
+:root {
+    --primary-dark: #2f3a47;          /* Deep Blue-Gray */
+    --secondary-bg-light: #f5f0eb;    /* Soft Off-White/Light Cream */
+    --accent-brown: #8b6d5c;          /* Warm Mid-Tone Brown */
+    --text-light: #e0e0e0;            /* Light Gray for dark backgrounds */
+    --text-dark: #3a3a3a;             /* Dark Gray for light backgrounds */
+    --hover-highlight: #a08170;       /* Slightly lighter brown for hovers */
+    --shadow-light: rgba(0, 0, 0, 0.08);
+    --shadow-medium: rgba(0, 0, 0, 0.15);
+    --font-main: 'Inter', sans-serif;
+    --font-heading: 'Montserrat', sans-serif;
+}
 
-/* General Reset and Body */
+/* --- General Reset and Body --- */
 * {
     margin: 0;
     padding: 0;
@@ -15,44 +20,29 @@
 }
 
 body, html {
-    font-family: 'Inter', sans-serif; /* Modern font choice, you might need to import from Google Fonts */
+    font-family: var(--font-main);
     line-height: 1.6;
     background-color: var(--secondary-bg-light);
     color: var(--text-dark);
     scroll-behavior: smooth;
 }
 
-/* Variables for easy color management */
-:root {
-    --primary-dark: #2f3a47;
-    --secondary-bg-light: #f5f0eb;
-    --accent-brown: #8b6d5c;
-    --text-light: #e0e0e0;
-    --text-dark: #3a3a3a;
-    --hover-highlight: #a08170;
-    --shadow-light: rgba(0, 0, 0, 0.08);
-    --shadow-medium: rgba(0, 0, 0, 0.15);
-}
-
-/* Typography */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif; /* Another modern font for headings */
+/* --- Typography --- */
+h1, h2, h3 {
+    font-family: var(--font-heading);
     color: var(--primary-dark);
     margin-bottom: 0.8em;
     line-height: 1.2;
 }
-
 h1 { font-size: 2.8em; }
-h2 { font-size: 2.2em; }
 p { margin-bottom: 1em; }
-strong { font-weight: 700; } /* Make strong stand out */
 
-/* Navbar */
+/* --- Navbar --- */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    padding: 15px 40px;
     background-color: var(--primary-dark);
     box-shadow: 0 2px 10px var(--shadow-medium);
     position: sticky;
@@ -93,51 +83,40 @@ strong { font-weight: 700; } /* Make strong stand out */
     color: var(--text-light);
 }
 
-/* Mobile Menu Toggle */
-.menu-toggle {
-    display: none; /* Hidden on desktop */
-    cursor: pointer;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 20px;
+.nav-links .ai-link {
+    background-color: var(--accent-brown);
+    font-weight: 700;
+}
+.nav-links .ai-link:hover {
+    background-color: var(--hover-highlight);
 }
 
-.menu-toggle .bar {
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: var(--text-light);
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
-
-/* Home Section */
+/* --- Home Section --- */
 .home {
-    min-height: calc(100vh - 80px); /* Adjust based on navbar height */
+    min-height: calc(100vh - 74px); /* Full screen height minus navbar */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 60px 20px;
-    background: linear-gradient(135deg, var(--primary-dark), #3f4d5d); /* Smoother gradient */
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--primary-dark), #4a5a6d);
     color: var(--text-light);
     text-align: center;
 }
 
 .home-content {
     max-width: 800px;
-    animation: fadeIn 1s ease-out;
+    animation: fadeIn 1.2s ease-out;
 }
 
 .home h1 {
-    font-size: 3.5em;
+    font-size: clamp(2.5rem, 5vw, 3.5rem); /* Responsive font size */
     margin-bottom: 0.5em;
-    color: var(--text-light); /* Override for dark background */
+    color: var(--text-light);
 }
 
 .home p {
-    font-size: 1.2em;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     margin-bottom: 1.5em;
     max-width: 600px;
     margin-left: auto;
@@ -146,22 +125,22 @@ strong { font-weight: 700; } /* Make strong stand out */
 
 .home-image-container {
     margin-top: 40px;
-    background-color: var(--secondary-bg-light); /* Background for the image frame */
+    background-color: var(--secondary-bg-light);
     padding: 15px;
     border-radius: 12px;
-    box-shadow: 0 8px 20px var(--shadow-medium);
-    display: inline-block; /* To make padding and shadow visible */
+    box-shadow: 0 8px 30px var(--shadow-medium);
+    display: inline-block;
 }
 
 .home-image {
     width: 100%;
-    max-width: 500px; /* Control image size within the container */
+    max-width: 500px;
     height: auto;
-    border-radius: 8px; /* Slightly smaller border-radius for inner image */
-    display: block; /* Remove extra space below image */
+    border-radius: 8px;
+    display: block;
 }
 
-/* Call-to-Action Button */
+/* --- Call-to-Action Button --- */
 .cta-button {
     display: inline-block;
     margin-top: 30px;
@@ -172,99 +151,72 @@ strong { font-weight: 700; } /* Make strong stand out */
     font-weight: 700;
     font-size: 1.1em;
     border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
     box-shadow: 0 6px 15px var(--shadow-medium);
 }
 
 .cta-button:hover {
     background-color: var(--hover-highlight);
     transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 8px 20px var(--shadow-medium);
+    box-shadow: 0 8px 25px var(--shadow-medium);
 }
 
-/* Navbar AI Advisor Link specific styling */
-.nav-links .ai-link {
-    background-color: var(--accent-brown);
-    font-weight: 700;
-}
-
-.nav-links .ai-link:hover {
-    background-color: var(--hover-highlight);
-    color: var(--text-light);
-}
-
-/* Footer */
+/* --- Footer --- */
 .footer {
     background-color: var(--primary-dark);
     color: var(--text-light);
     text-align: center;
-    padding: 20px 20px;
+    padding: 20px;
     font-size: 0.9em;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Keyframe Animations */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+/* --- Mobile Menu --- */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: var(--text-light);
+    border-radius: 3px;
 }
 
-/* Responsive Design */
+/* --- Responsive Design --- */
 @media (max-width: 768px) {
-    .navbar {
-        padding: 15px 20px;
-    }
-
     .nav-links {
         display: none;
         flex-direction: column;
         background-color: var(--primary-dark);
         position: absolute;
-        top: 70px; /* Adjust based on navbar height */
+        top: 74px; /* Matches navbar height */
         right: 0;
         width: 100%;
         gap: 0;
         box-shadow: 0 10px 20px var(--shadow-medium);
     }
-
-    .nav-links li {
-        width: 100%;
-        text-align: center;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .nav-links li:last-child {
-        border-bottom: none;
-    }
-
-    .nav-links li a {
-        padding: 15px 20px;
-        display: block;
-        border-radius: 0; /* No border-radius for full-width menu items */
-    }
-
     .nav-links.active {
         display: flex;
     }
-
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+    .nav-links li a {
+        padding: 15px 20px;
+        display: block;
+        border-radius: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
     .menu-toggle {
-        display: flex;
+        display: block;
     }
+}
 
-    .home h1 {
-        font-size: 2.5em;
-    }
-
-    .home p {
-        font-size: 1em;
-    }
-
-    .cta-button {
-        padding: 12px 25px;
-        font-size: 1em;
-    }
-
-    .home-image-container {
-        padding: 10px;
-    }
+/* --- Animations --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
