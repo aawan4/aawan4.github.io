@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - WeAR Galaxy</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">WeAR Galaxy</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/gallery/">Gallery</a></li>
+            <li><a href="https://ai.weargalaxy.me" target="_blank" class="ai-link">WeAR AI 🚀</a></li>
+            <li><a href="/contact/">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <main class="gallery-page">
+        <div class="gallery-header">
+            <h1>Our Collection</h1>
+            <p>Explore our curated selection of virtual eyewear. Find your perfect style.</p>
+        </div>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/g1.jpg" alt="A pair of classic aviator sunglasses">
+                <div class="overlay"><h3>Classic Aviators</h3></div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/g2.jpg" alt="A pair of modern wayfarer glasses">
+                <div class="overlay"><h3>Modern Wayfarers</h3></div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/g3.jpg" alt="Round vintage style glasses">
+                <div class="overlay"><h3>Round Vintage</h3></div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/g4.jpg" alt="Glasses with minimalist frames">
+                <div class="overlay"><h3>Minimalist Frames</h3></div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/g5.jpg" alt="Bold cat-eye style glasses">
+                <div class="overlay"><h3>Bold Cat-Eye</h3></div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/g6.jpg" alt="Geometric glasses with gold frames">
+                <div class="overlay"><h3>Geometric Gold</h3></div>
+            </div>
+            </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 WeAR Galaxy. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
