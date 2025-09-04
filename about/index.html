@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - WeAR Galaxy</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">WeAR Galaxy</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/gallery/">Gallery</a></li>
+            <li><a href="https://ai.weargalaxy.me" target="_blank" class="ai-link">WeAR AI 🚀</a></li>
+            <li><a href="/contact/">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>WeAR Galaxy is an ambitious project spearheaded by a dedicated team of software engineering students from the University of Central Punjab (UCP). With a shared passion for technology and innovation, the team is working tirelessly to redefine how people experience eyewear shopping. By integrating cutting-edge augmented reality (AR) technology, WeAR Galaxy aims to eliminate the guesswork and inconvenience of traditional shopping methods. The app provides users with an immersive virtual try-on experience, allowing them to see exactly how different glasses look and feel on their faces, all from the comfort of their homes. This initiative not only bridges the gap between fashion and technology but also aspires to set new standards in the eyewear industry. With a strong focus on usability, creativity, and seamless functionality, the team is determined to make eyewear shopping more engaging, efficient, and enjoyable for users worldwide. WeAR Galaxy embodies a vision of blending style with innovation, creating a future where trying on glasses is as simple as a tap on your screen.</p>
+
+            <h3>Meet the Developers</h3>
+            <div class="developers-grid">
+                <div class="developer">
+                    <img src="images/arham.jpg" alt="Muhammad Arham">
+                    <h4>Muhammad Arham</h4>
+                    <p>ML Engineer at Abacus Consulting (Pvt) Ltd, dedicated to implementing AI functionalities.</p>
+                </div>
+                <div class="developer">
+                    <img src="images/umar.jpg" alt="Muhammad Umar">
+                    <h4>Muhammad Umar</h4>
+                    <p>BSSE student at UCP, responsible for UI/UX design and enhancing user experience.</p>
+                </div>
+                <div class="developer">
+                    <img src="images/noman.jpg" alt="Noman Kaleem">
+                    <h4>Noman Kaleem</h4>
+                    <p>BSSE student at UCP, focusing on backend development and database management.</p>
+                </div>
+                <div class="developer">
+                    <img src="images/ali.jpg" alt="Ali Hamza">
+                    <h4>Ali Hamza</h4>
+                    <p>BSSE student at UCP, managing API integration and ensuring system scalability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 WeAR Galaxy. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
