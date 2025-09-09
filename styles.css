@@ -364,16 +364,17 @@ p { margin-bottom: 1em; }
     text-align: left;
 }
 
+/* --- THIS IS THE FIX --- */
 .info-item {
     display: flex;
-    align-items: flex-start;
+    align-items: center; /* Changed from flex-start to center */
     gap: 20px;
     margin-bottom: 25px;
 }
 
 .info-item span {
     font-size: 2em;
-    margin-top: 5px;
+    /* margin-top: 5px; (Removed) */
 }
 
 .info-item a {
@@ -459,7 +460,7 @@ p { margin-bottom: 1em; }
 
 /* --- Custom Logo Styling --- */
 .logo-image {
-    height: 40px; /* Adjust this value to make your logo bigger or smaller */
+    height: 40px;
     width: auto;
-    vertical-align: middle; /* Helps with perfect vertical alignment */
+    vertical-align: middle;
 }
