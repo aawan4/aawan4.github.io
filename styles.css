@@ -459,7 +459,7 @@ p { margin-bottom: 1em; }
 
 /* --- Custom Logo Styling --- */
 .logo-image {
-    height: 50px; /* Adjust this value to make your logo bigger or smaller */
+    height: 40px; /* Adjust this value to make your logo bigger or smaller */
     width: auto;
     vertical-align: middle; /* Helps with perfect vertical alignment */
 }
